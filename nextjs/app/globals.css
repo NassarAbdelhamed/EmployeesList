@@ -1,0 +1,62 @@
+.but{
+    display: flex;
+    color: #f6f3f3;
+    width: 110px;
+    height: 50px;
+    background-color:#0070f3 ;
+    text-align: center;
+    border: none;
+    margin: 9px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9%;
+}
+.but :first-child{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.but:hover{
+    cursor: pointer;
+}
+.but2{
+    display: flex;
+    color: #f6f3f3;
+    width: 110px;
+    height: 50px;
+    background-color:#429c0a ;
+    text-align: center;
+    border: none;
+    margin: 9px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9%;
+}
+.but2 :first-child{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.but2:hover{
+    cursor: pointer;
+}
+
+.but3{
+    display: flex;
+    color: #f6f3f3;
+    width: 110px;
+    height: 50px;
+    background-color:#d61616 ;
+    text-align: center;
+    border: none;
+    margin: 9px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9%;
+}
+.but3:first-child{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.but3:hover{
+    cursor: pointer;
+}
+

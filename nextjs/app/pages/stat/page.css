@@ -1,0 +1,35 @@
+.content{
+    display: flex;
+}
+.salary{
+    width: 30%;
+    height: fit-content;
+    display: flex;
+    border-radius:4%;
+    flex-direction: column;
+    padding-bottom: 10px;
+    margin-right: 20%;
+    justify-content: center;
+    align-items: center;
+}
+.age{
+    width: 30%;
+    height: 1000px;
+    margin-left: 20%;
+    display: flex;
+    flex-direction: column;
+}
+@media only screen and (max-width: 600px) {
+     .content{
+        flex-direction: column;
+     }
+     .salary{
+        margin: 1px;
+        padding: 6px;
+        width: 96%;
+     }
+     .age{
+        margin: 3px;
+        width: 88%;  
+     }
+    }

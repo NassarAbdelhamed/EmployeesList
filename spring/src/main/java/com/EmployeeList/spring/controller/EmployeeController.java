@@ -45,18 +45,90 @@ public class EmployeeController {
     }
 
     @PutMapping
-    public ResponseEntity<?> editEmp(@RequestParam int id,@RequestBody AddEmployee addEmployee){
+    public ResponseEntity<?> editEmp(@RequestParam int id,@RequestBody AddEmployee addEmployee) {
         try {
-            employeeServices.editEmp(id,addEmployee);
+            employeeServices.editEmp(id, addEmployee);
             return ResponseEntity.status(HttpStatus.OK).body(
                     "Edit successfully"
             );
-        }
-        catch (Exception ex){
+        } catch (Exception ex) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(
                     "error :-( can't edit employee \n please enter valid data"
             );
         }
+    }
 
+        @DeleteMapping
+        public ResponseEntity<?> removeEmp(@RequestParam int id){
+            try {
+                employeeServices.remove(id);
+                return ResponseEntity.status(HttpStatus.OK).body(
+                        "Delete successfully"
+                );
+            }
+            catch (Exception ex){
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(
+                        "error :-( can't delete employee "
+                );
+            }
+    }
+    @GetMapping
+    @RequestMapping("/maxSalary")
+    public ResponseEntity<?> maxSalary(){
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(
+                    employeeServices.maxSalary()
+            );
+        }
+        catch (Exception ex){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(
+                    "error :-) can't find employees"
+            );
+        }
+    }
+
+    @GetMapping
+    @RequestMapping("/minSalary")
+    public ResponseEntity<?> minSalary(){
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(
+                    employeeServices.minSalary()
+            );
+        }
+        catch (Exception ex){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(
+                    "error :-) can't find employees"
+            );
+        }
+    }
+
+    @GetMapping
+    @RequestMapping("/maxAge")
+    public ResponseEntity<?> maxAge(){
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(
+                    employeeServices.maxage()
+            );
+        }
+        catch (Exception ex){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(
+                    "error :-) can't find employees"
+            );
+        }
+    }
+
+    @GetMapping
+    @RequestMapping("/minAge")
+    public ResponseEntity<?> minage(){
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(
+                    employeeServices.minage()
+            );
+        }
+        catch (Exception ex){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(
+                    "error :-) can't find employees"
+            );
+        }
     }
 }

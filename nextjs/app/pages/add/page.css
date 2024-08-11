@@ -1,0 +1,53 @@
+
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.body div {
+    padding: 20px;
+}
+
+
+.addform {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.addform input[type="text"],
+.addform input[type="date"],
+.addform input[type="number"] {
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.addform input[type="text"]:focus,
+.addform input[type="date"]:focus,
+.addform input[type="number"]:focus {
+    border-color: #0070f3;
+    outline: none;
+}
+.buttons{
+    display: flex;
+}
+.addform label{
+    font-size: 17px;
+    font-weight: 800;
+    margin-right: 5px;
+}
+.addform .line{
+    display: flex;
+}
+
